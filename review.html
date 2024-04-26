@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    
+   <link rel="stylesheet" href="review.css">
+
+</head>
+<body >
+    <header>  
+    <nav>
+        <div class="logo">
+            SAGAR
+
+        </div>
+
+        <div class="menu">
+            <a href="./page.html">HOME </a>
+            <a href="#">REVIEWS </a>
+            <a href="./page3.html">SPECIALIZED TEST </a>
+            <a href="#">HELP </a>
+
+
+        </div>
+        <div class="register">
+            <a href="#">contact </a>
+
+
+
+        </div>
+    </nav>
+
+
+    <div  ng-app="myapp" ng-controller="mycont">
+      <div class="review" ng-repeat="review in reviews">
+        <h2>{{review.writer}}</h2>
+        <h3>{{review.written}}</h3>
+    </div>
+  
+
+    
+    </header>
+
+    
+    <script>
+      angular.module('myapp', [])
+      .controller('mycont', function($scope) {
+          $scope.reviews = [
+            {
+              writer:"KRISHNA MAURYA",
+              written:"Your website offers customization options that allow me to tailor the assessment to my specific interests, goals, or demographic factors, enhancing the relevance of the results.  I enjoy engaging content such as informative articles, interactive features, and multimedia resources that complement the assessment experience and deepen my understanding of personality psychology."
+            },
+            {
+              writer:"ALEX TOM",
+              written:" Your website demonstrates scientific credibility, incorporating established psychological theories and research-backed assessments into the analysis process. I appreciate the actionable recommendations and personalized advice based on my assessment results, guiding me on how to leverage my strengths and address areas for improvement."
+            },
+            {
+              writer:"SAM TREAT",
+              written:" Your site provides accurate and insightful assessments of personality traits, helping me gain a better understanding of myself."
+            }
+
+          ];
+      });
+  </script>
+
+
+    
+    
+</body>
+
+</html>
